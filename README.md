@@ -7,6 +7,7 @@ Pipeline
 
 
 1) Extraer los snps que están dentro de cada segmento. 
+----
 
 Esto se puede hacer con PLINK utilizando alguno de los siguiente comandos:
 
@@ -14,18 +15,20 @@ Esto se puede hacer con PLINK utilizando alguno de los siguiente comandos:
     plink --bfile infile --chr 2 --from-kb 5000 --to-kb 10000 --make-bed --out outfile.1
 
 2) Transponer los archivos obtenidos en el paso anterior 1)
+----
 
 Esto se puede hacer también con plink usando el siguiente comando: 
 
     plink --bfile outfile.1 --recode12 --output-missing-genotype 0 --transpose --out outfile.2
 
 3) Construir el archivo de covariables
+----
 
 En este paso, tenemos que integrar la covariable del segmento al
 archivo original de covariables, que incluye IMC, edad y genero.
 
-4) Correr el análisis de asociación segmento x segmento, población x
-   población, con el programa EMMAX
+4) Correr el análisis de asociación segmento x segmento, población x población, con el programa EMMAX
+----
 
 Los archivos requeridos para correr EMMAX son:
 
@@ -47,8 +50,10 @@ salida con formato .ps
     outfile.4.zap
     outfile.4.tot
 
-5) Formatear los archivos de salida de EMMAX para que puedan entrar al
-programa METAl, esté último va a combinar los resultados de las 4
+5) Formatear los archivos de salida de EMMAX para que puedan entrar a METAl
+----
+
+Eté último va a combinar los resultados de las 4
 poblaciones.
 
 
@@ -74,6 +79,7 @@ poblaciones.
     mv tmp1 outfile.4.nah.detail.txt 
 
 6) Correr METAL
+----
 
 Se utiliza un archivo como el siguiente, nombrado para fines de
 ejemplo README_METAL_logLDL:
@@ -123,3 +129,5 @@ cambiarle el nombre y moverlo de carpeta
     mv METAANALYSIS1.TBL metal_outfile.tbl
 
 7) Continuar con el siguiente segmento
+----
+
