@@ -1,4 +1,4 @@
-# Local Ancestry Adjustment for Association Study
+# Local Ancestry Adjustment for Association Studies (LA3S) #
 
 Asociación de polimorfismos a rasgos metabólicos utilizando
 microarreglos de genotipificación ajustando por ancestría local.
@@ -6,9 +6,10 @@ microarreglos de genotipificación ajustando por ancestría local.
 
 ***
 
-## Insumos
+## Inputs ##
 
-### infile
+### infile ###
+
 Archivos por población con los 442,450 SNPs, ''infile''
 
     INDIGENAS_GWAS_519_NAHUAS.QC.UNIF.bed , *.bim, *.fam
@@ -16,61 +17,63 @@ Archivos por población con los 442,450 SNPs, ''infile''
     INDIGENAS_GWAS_519_TOTONACOS.QC.UNIF, *.bim, *.fam
     INDIGENAS_GWAS_519_ZAPOTECOS.QC.UNIF, *.bim, *.fam
 
-### frq file
+### frq file ###
 
     INDIGENAS_GWAS_519_TODASPOB.QC.UNIF.frq
 
-### phenofile
+### phenofile ###
 
     nahuas_logLDL_EMMAX.txt
     mayas_logLDL_EMMAX.txt
     totonacos_logLDL_EMMAX.txt
     zapotecos_logLDL_EMMAX.txt
 
-### kifile
+### kifile ###
 
     INDIGENAS_GWAS_519_NAHUAS.QC.UNIF.EMMAX.tr.aIBS.kinf
     INDIGENAS_GWAS_519_MAYAS.QC.UNIF.EMMAX.tr.aIBS.kinf
     INDIGENAS_GWAS_519_TOTONACOS.QC.UNIF.EMMAX.tr.aIBS.kinf
     INDIGENAS_GWAS_519_ZAPOTECOS.QC.UNIF.EMMAX.tr.aIBS.kinf
 
-### covariate templates
+### covariate templates ###
 
     covariables_NAHUAS+IMC_EMMAX_AUTO.txt
     covariables_MAYAS+IMC_EMMAX_AUTO.txt
     covariables_TOTONACOS+IMC_EMMAX_AUTO.txt
     covariables_ZAPOTECOS+IMC_EMMAX_AUTO.txt
 
+### A-B files ###
 
+A and B files per individual, grouped in directories per chromosome.
 
 
 ***
 
 
 
-## Pipeline
+## Pipeline ##
 
-### 1. Extraer los snps que están dentro de cada segmento. 
+### 1. Extraer los snps que están dentro de cada segmento. ###
 
 
 Esto se puede hacer con PLINK utilizando alguno de los siguiente comandos:
 
     plink --bfile infile --chr 2 --from-kb 5000 --to-kb 10000 --make-bed --out outfile.1
 
-### 2. Transponer los archivos obtenidos en el paso anterior 1)
+### 2. Transponer los archivos obtenidos en el paso anterior 1) ###
 
 
 Esto se puede hacer también con plink usando el siguiente comando: 
 
     plink --bfile outfile.1 --recode12 --output-missing-genotype 0 --transpose --out outfile.2
 
-### 3. Construir el archivo de covariables
+### 3. Construir el archivo de covariables ###
 
 
 En este paso, tenemos que integrar la covariable del segmento al
 archivo original de covariables, que incluye IMC, edad y genero.
 
-### 4. Correr el análisis de asociación segmento x segmento, población x población, con el programa EMMAX
+### 4. Correr el análisis de asociación segmento x segmento, población x población, con el programa EMMAX ###
 
 
 Los archivos requeridos para correr EMMAX son:
@@ -93,25 +96,25 @@ salida con formato .ps
     outfile.4.zap
     outfile.4.tot
 
-### 5. Formatear los archivos de salida de EMMAX para que puedan entrar a METAL
+### 5. Formatear los archivos de salida de EMMAX para que puedan entrar a METAL ###
 
 Este último va a combinar los resultados de las 4 poblaciones.
 
-#### 5.1) Mover los archivos .ps a .txt
+#### 5.1) Mover los archivos .ps a .txt ####
 
     mv outfile.4.nah.ps outfile.4.nah.txt
 
-#### 5.2) Ponerle título
+#### 5.2) Ponerle título ####
 
     echo "SNP BETA SE P" > header.txt
     cat header.txt outfile.4.nah.txt > tmp1
     mv tmp1 outfile.4.nah.1.txt
 
-#### 5.3) Agregarle al archivo la frecuencia del alelo. Contamos ya con el archivo frq
+#### 5.3) Agregarle al archivo la frecuencia del alelo. Contamos ya con el archivo frq ####
 
     join -1 2 -2 1 allpopulation.frq outfile.4.nah.1.txt > outfile.4.nah.det.txt
 
-#### 5.4) Obtener los rs´s y posición del archivo .bim para después fusionar los archivos
+#### 5.4) Obtener los rs´s y posición del archivo .bim para después fusionar los archivos ####
 
     echo "SNP BP" > chr.txt
     awk '{print  $2, $4}' infile.bim >> chr.txt
@@ -120,7 +123,7 @@ Este último va a combinar los resultados de las 4 poblaciones.
 
 
 
-### 6. Correr METAL
+### 6. Correr METAL ###
 
 Se utiliza un archivo como el siguiente, nombrado para fines de
 ejemplo README_METAL_logLDL:
@@ -169,6 +172,6 @@ cambiarle el nombre y moverlo de carpeta
 
     mv METAANALYSIS1.TBL metal_outfile.tbl
 
-### 7. Continuar con el siguiente segmento
+### 7. Continuar con el siguiente segmento ###
 
 
