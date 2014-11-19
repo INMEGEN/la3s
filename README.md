@@ -1,13 +1,47 @@
-Local Ancestry Adjustment for Association Study
-===============================================
+# Local Ancestry Adjustment for Association Study
 
 Asociación de polimorfismos a rasgos metabólicos utilizando
 microarreglos de genotipificación ajustando por ancestría local.
 
+## Insumos
 
-Pipeline
-========
+### infile
+Archivos por población con los 442,450 SNPs, ''infile''
 
+    INDIGENAS_GWAS_519_NAHUAS.QC.UNIF.bed , *.bim, *.fam
+    INDIGENAS_GWAS_519_MAYAS.QC.UNIF, *.bim, *.fam
+    INDIGENAS_GWAS_519_TOTONACOS.QC.UNIF, *.bim, *.fam
+    INDIGENAS_GWAS_519_ZAPOTECOS.QC.UNIF, *.bim, *.fam
+
+### frq file
+
+    INDIGENAS_GWAS_519_TODASPOB.QC.UNIF.frq
+
+### phenofile
+
+    nahuas_logLDL_EMMAX.txt
+    mayas_logLDL_EMMAX.txt
+    totonacos_logLDL_EMMAX.txt
+    zapotecos_logLDL_EMMAX.txt
+
+### kifile
+
+    INDIGENAS_GWAS_519_NAHUAS.QC.UNIF.EMMAX.tr.aIBS.kinf
+    INDIGENAS_GWAS_519_MAYAS.QC.UNIF.EMMAX.tr.aIBS.kinf
+    INDIGENAS_GWAS_519_TOTONACOS.QC.UNIF.EMMAX.tr.aIBS.kinf
+    INDIGENAS_GWAS_519_ZAPOTECOS.QC.UNIF.EMMAX.tr.aIBS.kinf
+
+### covariate templates
+
+    covariables_NAHUAS+IMC_EMMAX_AUTO.txt
+    covariables_MAYAS+IMC_EMMAX_AUTO.txt
+    covariables_TOTONACOS+IMC_EMMAX_AUTO.txt
+    covariables_ZAPOTECOS+IMC_EMMAX_AUTO.txt
+
+
+
+
+## Pipeline
 
 1) Extraer los snps que están dentro de cada segmento. 
 ----
@@ -71,7 +105,8 @@ poblaciones.
     cat header.txt outfile.4.nah.txt > tmp1
     mv tmp1 outfile.4.nah.1.txt
 
-5.3) Agregarle al archivo la frecuencia del alelo
+5.3) Agregarle al archivo la frecuencia del alelo. Contamos ya con el
+archivo frq
 
     join -1 2 -2 1 allpopulation.frq outfile.4.nah.1.txt > outfile.4.nah.det.txt
 
