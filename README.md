@@ -175,3 +175,10 @@ cambiarle el nombre y moverlo de carpeta
 ### 7. Continuar con el siguiente segmento ###
 
 
+
+
+## Dependencies
+
+- [plink](http://pngu.mgh.harvard.edu/~purcell/plink/)
+- [EMMAX](http://www.sph.umich.edu/csg/kang/emmax/download/index.html)
+- [METAL](http://www.sph.umich.edu/csg/abecasis/metal/)
