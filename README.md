@@ -1,5 +1,8 @@
-diabetes
-========
+Local Ancestry Adjustment for Association Study
+===============================================
+
+Asociación de polimorfismos a rasgos metabólicos utilizando
+microarreglos de genotipificación ajustando por ancestría local.
 
 
 Pipeline
@@ -12,6 +15,7 @@ Pipeline
 Esto se puede hacer con PLINK utilizando alguno de los siguiente comandos:
 
     plink --bfile infile --from rs273744 --to rs89883 --make-bed --out outfile.1
+
     plink --bfile infile --chr 2 --from-kb 5000 --to-kb 10000 --make-bed --out outfile.1
 
 2) Transponer los archivos obtenidos en el paso anterior 1)
