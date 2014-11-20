@@ -4,6 +4,8 @@
 ################################################################
 
 import csv
+import json
+
 from config import individuals, chromosomes, data_dir
 
 joint = {}
@@ -23,14 +25,13 @@ for chrom in chromosomes:
                         joint[(iid,chrom,start)] = {parent: float(nat)}
 
 
-with open("%s/segments.csv" % data_dir, 'w') as f:
-    segwriter = csv.writer(f, delimiter="\t")
-    segwriter.writerow(["iid","chr","start","nat"])
-    for pos in sorted(joint):
-        (iid, chrom, start) = pos
-        segwriter.writerow([ iid,
-                             chrom, 
-                             start,
-                             (joint[pos]['A'] + joint[pos]['B'] )/ 2])
+segments={}
+for k in sorted(joint):
+    (iid, chrom, start) = k
+    pos = "%s:%s" % (chrom, start)
+    if not pos  in segments:
+        segments[ pos ] = {}
+    segments[ pos ][ iid ]= (joint[k]['A'] + joint[k]['B'] )/ 2
 
-
+with open("%s/segments.json" % data_dir, 'w') as f:
+    json.dump(segments, f, indent=4)
