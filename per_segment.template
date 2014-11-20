@@ -17,15 +17,24 @@ $PLINK --noweb --bfile {{ inputs.infile }} --chr {{ chrom }} --from-kb {{ from_k
 
 $PLINK --noweb --bfile ${TMPFILE}_1 --recode12 --output-missing-genotype 0 --transpose --out ${TMPFILE}_2 
 
+
+
+# per population
+{% for population in inputs %}
+
+####################
+# {{ population }} #
+####################
+
 # 3) add segment covariates
-COVFILE={{ inputs.covfile }}
-SEGCOV=${TMPFILE}_{{ population }}_{{ chrom }}:{{ from_kb }}_cov.txt
+COVFILE={{ inputs[population].covfile }}
+SEGCOV=${TMPFILE}_{{ population }}_{{ chrom }}_{{ from_kb }}_cov.txt
 $PYTHON segment_covariates.py --segments {{ segments }} --covariates $COVFILE --locus {{ chrom }}:{{ from_kb }} --output $SEGCOV
 
 # 4) 
 # archivos requeridos para correr EMMAX
-PHENOFILE={{ inputs.phenofile }}
-KINFILE={{ inputs.kinfile }}
+PHENOFILE={{ inputs[population].phenofile }}
+KINFILE={{ inputs[population].kinfile }}
 TMPFILE_4=${TMPFILE}_4_{{ population }}
 
 $EMMAX -v -d 10 -t ${TMPFILE}_2  -p $PHENOFILE -c $SEGCOV -k $KINFILE -o ${TMPFILE_4}
@@ -44,17 +53,26 @@ cat ${TMPFILE}_header.txt ${TMPFILE_4}.txt > ${TMPFILE_4}_h.txt
 
 # 5.3) Agregarle al archivo la frecuencia del alelo
 
-FRQFILE={{ inputs.frqfile }}
+FRQFILE={{ inputs[population].frqfile }}
 
 join -1 2 -2 1 $FRQFILE ${TMPFILE_4}_h.txt > ${TMPFILE_4}_det.txt
 
 # 5.4) 
 
 echo "SNP BP" > ${TMPFILE}_chr.txt
-awk '{print  $2, $4}' {{ inputs.infile }}.bim >> ${TMPFILE}_chr.txt
+awk '{print  $2, $4}' {{ inputs[population].infile }}.bim >> ${TMPFILE}_chr.txt
 join -1 1 -2 1 ${TMPFILE}_chr.txt ${TMPFILE_4}_det.txt > ${TMPFILE_4}_detail.txt
 
-# 6) 
-$METAL README_METAL_logLDL
+#####################
+# /{{ population }} #
+#####################
 
-mv METAANALYSIS1.TBL metal_outfile.tbl
+{% endfor %}
+# /per population
+METALSCRIPT=${TMPFILE}_{{ chrom }}_{{ from_kb }}.metal
+$PYTHON create_metal_script.py --details {% for population in inputs %}${TMPFILE}_4_{{ population }}_detail.txt {% endfor %} \
+                               --output $METALSCRIPT
+
+# 6) 
+$METAL $METALSCRIPT
+#mv METAANALYSIS1.TBL metal_outfile.tbl
