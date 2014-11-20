@@ -28,7 +28,7 @@ Archivos por población con los 442,450 SNPs, ''infile''
     totonacos_logLDL_EMMAX.txt
     zapotecos_logLDL_EMMAX.txt
 
-### kifile ###
+### kinfile ###
 
     INDIGENAS_GWAS_519_NAHUAS.QC.UNIF.EMMAX.tr.aIBS.kinf
     INDIGENAS_GWAS_519_MAYAS.QC.UNIF.EMMAX.tr.aIBS.kinf
