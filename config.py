@@ -6,3 +6,35 @@ chromosomes = [21, 22]
 data_dir = '/Users/rgarcia/la3s/data'
 
 
+inputs = {
+    'maya': { 'infile': data_dir + '/ANALISIS_COVARIABLES/' + 'INDIGENAS_GWAS_519_MAYAS.QC.UNIF',
+              'covfile': data_dir + '/ANALISIS_COVARIABLES/' + 'covariables_MAYAS+IMC_EMMAX_AUTO.txt',
+              'kinfile': data_dir + '/ANALISIS_COVARIABLES/'+ 'INDIGENAS_GWAS_519_MAYAS.QC.UNIF.EMMAX.tr.aIBS.kinf',
+              'phenofile': data_dir + '/ANALISIS_COVARIABLES/'+ 'mayas_logLDL_EMMAX.txt',
+              'frqfile': data_dir + '/ANALISIS_COVARIABLES/'+ 'INDIGENAS_GWAS_519_TODASPOB.QC.UNIF.frq', 
+          },
+    'nahua': { 'infile': data_dir + '/ANALISIS_COVARIABLES/' + 'INDIGENAS_GWAS_519_NAHUAS.QC.UNIF',
+               'covfile': data_dir + '/ANALISIS_COVARIABLES/' + 'covariables_NAHUAS+IMC_EMMAX_AUTO.txt',
+               'kinfile': data_dir + '/ANALISIS_COVARIABLES/'+ 'INDIGENAS_GWAS_519_NAHUAS.QC.UNIF.EMMAX.tr.aIBS.kinf',
+               'phenofile': data_dir + '/ANALISIS_COVARIABLES/'+ 'nahuas_logLDL_EMMAX.txt',
+               'frqfile': data_dir + '/ANALISIS_COVARIABLES/'+ 'INDIGENAS_GWAS_519_TODASPOB.QC.UNIF.frq', 
+           },
+    'totonaca': { 'infile': data_dir + '/ANALISIS_COVARIABLES/' + 'INDIGENAS_GWAS_519_TOTONACOS.QC.UNIF.100',
+                  'covfile': data_dir + '/ANALISIS_COVARIABLES/' + 'covariables_TOTONACOS+IMC_EMMAX_AUTO.txt',
+                  'kinfile': data_dir + '/ANALISIS_COVARIABLES/'+ 'INDIGENAS_GWAS_519_TOTONACOS.QC.UNIF.100.EMMAX.tr.aIBS.kinf',
+                  'phenofile': data_dir + '/ANALISIS_COVARIABLES/'+ 'totonacos_logLDL_EMMAX.txt',
+                  'frqfile': data_dir + '/ANALISIS_COVARIABLES/'+ 'INDIGENAS_GWAS_519_TODASPOB.QC.UNIF.frq', 
+              },
+    'zapoteca': { 'infile': data_dir + '/ANALISIS_COVARIABLES/' + 'INDIGENAS_GWAS_519_ZAPOTECOS.QC.UNIF',
+                  'covfile': data_dir + '/ANALISIS_COVARIABLES/' + 'covariables_ZAPOTECOS+IMC_EMMAX_AUTO.txt',
+                  'kinfile': data_dir + '/ANALISIS_COVARIABLES/'+ 'INDIGENAS_GWAS_519_ZAPOTECOS.QC.UNIF.EMMAX.tr.aIBS.kinf',
+                  'phenofile': data_dir + '/ANALISIS_COVARIABLES/'+ 'zapotecos_logLDL_EMMAX.txt',
+                  'frqfile': data_dir + '/ANALISIS_COVARIABLES/'+ 'INDIGENAS_GWAS_519_TODASPOB.QC.UNIF.frq', 
+              },
+}
+
+
+
+plink = "/path/to/plink"
+emmax = "/path/to/emmax"
+metal = "/path/to/metal"
