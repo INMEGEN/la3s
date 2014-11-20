@@ -1,54 +1,57 @@
 #!/bin/bash
 
-# 1) Extraer los snps que están dentro de cada segmento. 
+PLINK={{ plink }}
+EMMAX={{ emmax }}
+METAL={{ metal }}
 
-plink --bfile infile --chr 2 --from-kb 5000 --to-kb 10000 --make-bed --out outfile.1
+TMPFILE=/tmp/${LSB_JOBID}
 
-# 2) Transponer los archivos obtenidos en el paso anterior 1)
+# 1. Extract SNPs from segment
 
-plink --bfile outfile.1 --recode12 --output-missing-genotype 0 --transpose --out outfile.2
+$PLINK --noweb --bfile {{ inputs.infile }} --chr {{ chrom }} --from-kb {{ from_kb }} --to-kb {{ to_kb }} --make-bed --out ${TMPFILE}_1
 
-# 3) Construir el archivo de covariables
+# 2) Tanspose previous file
 
-# 4) Correr el análisis de asociación segmento x segmento, población x población, con el programa EMMAX
+$PLINK --noweb --bfile ${TMPFILE}_1 --recode12 --output-missing-genotype 0 --transpose --out ${TMPFILE}_2 
 
+# 3) 
 
+# 4) 
 # archivos requeridos para correr EMMAX
-PHENFILE=/path/to/phenfile
-KINFILE=/path/to/kinfile
+PHENFILE={{ inputs.phenfile }}
+KINFILE={{ inputs.kinfile }}
+COVFILE={{ inputs.covfile }}
+TMPFILE_4=${TMPFILE}_4_{{ population }}
 
-emmax-intel64 -v -d 10 -t outfile.2  -p $PHENFILE -c covfile.3 -k $KINFILE -o outfile.4
-# emmax-intel64 -v -d 10 -t outfile.2  -p $PHENFILE -c covfile.3 -k $KINFILE -o outfile.4
-# emmax-intel64 -v -d 10 -t outfile.2  -p $PHENFILE -c covfile.3 -k $KINFILE -o outfile.4
-# emmax-intel64 -v -d 10 -t outfile.2  -p $PHENFILE -c covfile.3 -k $KINFILE -o outfile.4
+$EMMAX -v -d 10 -t ${TMPFILE}_2  -p $PHENFILE -c $COVFILE -k $KINFILE -o $TMPFILE_4
 
 
 # 5) Formatear los archivos de salida de EMMAX para que puedan entrar a METAl
 
 # 5.1) Mover los archivos .ps a .txt
 
-mv outfile.4.nah.ps outfile.4.nah.txt
+mv ${TMPFILE_4}.ps ${TMPFILE_4}.txt
 
-# 5.2) Ponerle título
+# 5.2) 
 
-echo "SNP BETA SE P" > header.txt
-cat header.txt outfile.4.nah.txt > tmp1
-mv tmp1 outfile.4.nah.1.txt
+echo "SNP BETA SE P" > ${TMPFILE}_header.txt
+cat ${TMPFILE}_header.txt ${TMPFILE_4}.txt > ${TMPFILE_4}_h.txt
 
 # 5.3) Agregarle al archivo la frecuencia del alelo
 
-join -1 2 -2 1 allpopulation.frq outfile.4.nah.1.txt > outfile.4.nah.det.txt
+FRQFILE={{ frqfile }}
 
-# 5.4) Obtener los rs´s y posición del archivo .bim para después fusionar los archivos
+join -1 2 -2 1 $FRQFILE ${TMPFILE_4}_h.txt > ${TMPFILE_4}_det.txt
 
-echo "SNP BP" > chr.txt
-awk '{print  $2, $4}' infile.bim >> chr.txt
-join -1 1 -2 1 chr.txt outfile.4.nah.det.txt > tmp1
-mv tmp1 outfile.4.nah.detail.txt 
+# 5.4) 
 
-# 6) Correr METAL
+echo "SNP BP" > ${TMPFILE}_chr.txt
+awk '{print  $2, $4}' {{ inputs.infile }}.bim >> ${TMPFILE}_chr.txt
+join -1 1 -2 1 ${TMPFILE}_chr.txt ${TMPFILE_4}_det.txt > ${TMPFILE_4}_detail.txt
 
-metal README_METAL_logLDL
+# 6) 
+
+$METAL README_METAL_logLDL
 
 mv METAANALYSIS1.TBL metal_outfile.tbl
 
