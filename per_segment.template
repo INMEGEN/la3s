@@ -1,8 +1,11 @@
 #!/bin/bash
 
+#BSUB -o /tmp/out.%J
+
 PLINK={{ plink }}
 EMMAX={{ emmax }}
 METAL={{ metal }}
+PYTHON={{ python }}
 
 TMPFILE=/tmp/${LSB_JOBID}
 
@@ -14,16 +17,18 @@ $PLINK --noweb --bfile {{ inputs.infile }} --chr {{ chrom }} --from-kb {{ from_k
 
 $PLINK --noweb --bfile ${TMPFILE}_1 --recode12 --output-missing-genotype 0 --transpose --out ${TMPFILE}_2 
 
-# 3) 
+# 3) add segment covariates
+COVFILE={{ inputs.covfile }}
+SEGCOV=${TMPFILE}_{{ population }}_{{ chrom }}:{{ from_kb }}_cov.txt
+$PYTHON segment_covariates.py --segments {{ segments }} --covariates $COVFILE --locus {{ chrom }}:{{ from_kb }} --output $SEGCOV
 
 # 4) 
 # archivos requeridos para correr EMMAX
-PHENFILE={{ inputs.phenfile }}
+PHENOFILE={{ inputs.phenofile }}
 KINFILE={{ inputs.kinfile }}
-COVFILE={{ inputs.covfile }}
 TMPFILE_4=${TMPFILE}_4_{{ population }}
 
-$EMMAX -v -d 10 -t ${TMPFILE}_2  -p $PHENFILE -c $COVFILE -k $KINFILE -o $TMPFILE_4
+$EMMAX -v -d 10 -t ${TMPFILE}_2  -p $PHENOFILE -c $SEGCOV -k $KINFILE -o ${TMPFILE_4}
 
 
 # 5) Formatear los archivos de salida de EMMAX para que puedan entrar a METAl
@@ -39,7 +44,7 @@ cat ${TMPFILE}_header.txt ${TMPFILE_4}.txt > ${TMPFILE_4}_h.txt
 
 # 5.3) Agregarle al archivo la frecuencia del alelo
 
-FRQFILE={{ frqfile }}
+FRQFILE={{ inputs.frqfile }}
 
 join -1 2 -2 1 $FRQFILE ${TMPFILE_4}_h.txt > ${TMPFILE_4}_det.txt
 
@@ -50,8 +55,6 @@ awk '{print  $2, $4}' {{ inputs.infile }}.bim >> ${TMPFILE}_chr.txt
 join -1 1 -2 1 ${TMPFILE}_chr.txt ${TMPFILE_4}_det.txt > ${TMPFILE_4}_detail.txt
 
 # 6) 
-
 $METAL README_METAL_logLDL
 
 mv METAANALYSIS1.TBL metal_outfile.tbl
-

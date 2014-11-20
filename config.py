@@ -38,3 +38,4 @@ inputs = {
 plink = "/path/to/plink"
 emmax = "/path/to/emmax"
 metal = "/path/to/metal"
+python = "/usr/local/bin/python"
