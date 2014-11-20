@@ -1,29 +1,31 @@
-
-import argparse
-
-parser = argparse.ArgumentParser(description='Average ancestry of both parents')
-parser.add_argument('--id', required=True, help='ID of the individual, will read files for A and B')
-parser.add_argument('--chr', required=True, help='chromosome to process')
-
-args = parser.parse_args()
+import csv
+from config import individuals, chromosomes, data_dir
 
 joint = {}
-for parent in ('A','B'):
-    with open("%s_%s_%s.bed.txt" % (args.chr, args.id, parent)) as f:
-        lines = f.readlines()
-        for line in lines[1:]:
-            columnas = line.split()
-            (chrom, start, percentage) = (columnas[0], columnas[1], columnas[-1])
-            start = int(start)
-            if (chrom,start) in joint:
-                joint[(chrom,start)][parent] = float(percentage)
-            else:
-                joint[(chrom,start)] = {parent: float(percentage)}
+for chrom in chromosomes:
+    for iid in individuals:
+        for parent in ('A','B'):
+            with open("%s/chr%s_out/chr%s_%s_%s.bed.txt" % (data_dir, chrom, chrom, iid, parent)) as f:
+                bedreader = csv.reader(f, delimiter="\t")
+                header = bedreader.next()
+                for row in bedreader:
+                    (chrom, start, posterior) = (row[0], row[1], row[-1])
+                    (ceu,yri,nat) = posterior.split(',')
+                    start = int(start)
+                    if (iid,chrom,start) in joint:
+                        joint[(iid,chrom,start)][parent] = float(nat)
+                    else:
+                        joint[(iid,chrom,start)] = {parent: float(nat)}
 
 
-
-with open("%s_%s_joint.csv" % (args.chr, args.id), 'w') as f:
-    f.write("Chr\tStart(bp)\tNAT\n")
+with open("%s/segmentos.csv" % data_dir, 'w') as f:
+    segwriter = csv.writer(f, delimiter="\t")
+    segwriter.writerow(["iid","chr","start","nat"])
     for pos in sorted(joint):
-        (chrom, start) = pos
-        f.write("%s\t%s\t%s\n" % (chrom, str(start), (joint[pos]['A'] + joint[pos]['B'] )/ 2))
+        (iid, chrom, start) = pos
+        segwriter.writerow([ iid,
+                             chrom, 
+                             start,
+                             (joint[pos]['A'] + joint[pos]['B'] )/ 2])
+
+
