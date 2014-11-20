@@ -1,3 +1,8 @@
+
+################################################################
+# This script will generate a segments file from A+B bed files #
+################################################################
+
 import csv
 from config import individuals, chromosomes, data_dir
 
@@ -18,7 +23,7 @@ for chrom in chromosomes:
                         joint[(iid,chrom,start)] = {parent: float(nat)}
 
 
-with open("%s/segmentos.csv" % data_dir, 'w') as f:
+with open("%s/segments.csv" % data_dir, 'w') as f:
     segwriter = csv.writer(f, delimiter="\t")
     segwriter.writerow(["iid","chr","start","nat"])
     for pos in sorted(joint):

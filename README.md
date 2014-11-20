@@ -53,6 +53,11 @@ A and B files per individual, grouped in directories per chromosome.
 
 ## Pipeline ##
 
+### 0. Generate segments file from beds ###
+
+    python segments_from_A+B.py
+
+
 ### 1. Extraer los snps que están dentro de cada segmento. ###
 
 
