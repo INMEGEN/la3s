@@ -7,11 +7,14 @@ EMMAX={{ emmax }}
 METAL={{ metal }}
 PYTHON={{ python }}
 
-TMPFILE=/tmp/${LSB_JOBID}
+
+
+# per population
+{% for population in inputs %}
 
 # 1. Extract SNPs from segment
-
-$PLINK --noweb --bfile {{ inputs.infile }} --chr {{ chrom }} --from-kb {{ from_kb }} --to-kb {{ to_kb }} --make-bed --out ${TMPFILE}_1
+TMPFILE=/tmp/${LSB_JOBID}_{{ population }}
+$PLINK --noweb --bfile {{ inputs[population].infile }} --chr {{ chrom }} --from-bp {{ from_kb }} --to-bp {{ to_kb }} --make-bed --out ${TMPFILE}_1
 
 # 2) Tanspose previous file
 
@@ -19,8 +22,7 @@ $PLINK --noweb --bfile ${TMPFILE}_1 --recode12 --output-missing-genotype 0 --tra
 
 
 
-# per population
-{% for population in inputs %}
+
 
 ####################
 # {{ population }} #
