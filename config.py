@@ -3,7 +3,7 @@ individuals = [ 'APOM10', 'APOM11', 'APOM13', 'APOM14', 'APOM15', 'APOM17', 'APO
 # chromosomes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
 chromosomes = [21, 22]
 
-data_dir = '/Users/rgarcia/la3s/data'
+data_dir = '/home/rgarcia/la3s/data'
 
 
 inputs = {
@@ -35,7 +35,7 @@ inputs = {
 
 
 
-plink = "/path/to/plink"
-emmax = "/path/to/emmax"
-metal = "/path/to/metal"
-python = "/usr/local/bin/python"
+plink = "/usr/bin/p-link"
+emmax = "/usr/local/bin/emmax-intel64"
+metal = "/usr/local/bin/metal"
+python = "/usr/bin/python"
