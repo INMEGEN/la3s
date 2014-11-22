@@ -16,6 +16,9 @@ PYTHON={{ python }}
 TMPFILE=/tmp/${LSB_JOBID}_{{ population }}
 $PLINK --noweb --bfile {{ inputs[population].infile }} --chr {{ chrom }} --from-bp {{ from_kb }} --to-bp {{ to_kb }} --make-bed --out ${TMPFILE}_1
 
+$PLINK --bfile ${TMPFILE}_1 --freq --out ${TMPFILE}_frq
+
+
 # 2) Tanspose previous file
 
 $PLINK --noweb --bfile ${TMPFILE}_1 --recode12 --output-missing-genotype 0 --transpose --out ${TMPFILE}_2 
@@ -37,7 +40,7 @@ $PYTHON segment_covariates.py --segments {{ segments }} --covariates $COVFILE --
 # archivos requeridos para correr EMMAX
 PHENOFILE={{ inputs[population].phenofile }}
 KINFILE={{ inputs[population].kinfile }}
-TMPFILE_4=${TMPFILE}_4_{{ population }}
+TMPFILE_4=${TMPFILE}_4
 
 $EMMAX -v -d 10 -t ${TMPFILE}_2  -p $PHENOFILE -c $SEGCOV -k $KINFILE -o ${TMPFILE_4}
 
@@ -55,14 +58,14 @@ cat ${TMPFILE}_header.txt ${TMPFILE_4}.txt > ${TMPFILE_4}_h.txt
 
 # 5.3) Agregarle al archivo la frecuencia del alelo
 
-FRQFILE={{ inputs[population].frqfile }}
+FRQFILE=${TMPFILE}_frq.frq
 
 join -1 2 -2 1 $FRQFILE ${TMPFILE_4}_h.txt > ${TMPFILE_4}_det.txt
 
 # 5.4) 
 
 echo "SNP BP" > ${TMPFILE}_chr.txt
-awk '{print  $2, $4}' {{ inputs[population].infile }}.bim >> ${TMPFILE}_chr.txt
+awk '{print  $2, $4}' ${TMPFILE}_1.bim >> ${TMPFILE}_chr.txt
 join -1 1 -2 1 ${TMPFILE}_chr.txt ${TMPFILE_4}_det.txt > ${TMPFILE_4}_detail.txt
 
 #####################
@@ -72,9 +75,12 @@ join -1 1 -2 1 ${TMPFILE}_chr.txt ${TMPFILE_4}_det.txt > ${TMPFILE_4}_detail.txt
 {% endfor %}
 # /per population
 METALSCRIPT=${TMPFILE}_{{ chrom }}_{{ from_kb }}.metal
-$PYTHON create_metal_script.py --details {% for population in inputs %}${TMPFILE}_4_{{ population }}_detail.txt {% endfor %} \
+$PYTHON create_metal_script.py --details {% for population in inputs %}/tmp/${LSB_JOBID}_{{ population}}_4_detail.txt {% endfor %} \
                                --output $METALSCRIPT
 
 # 6) 
 $METAL $METALSCRIPT
 #mv METAANALYSIS1.TBL metal_outfile.tbl
+
+
+# remove everything except detail file and metal table
