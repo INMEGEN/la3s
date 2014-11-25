@@ -5,6 +5,7 @@ import sys
 parser = argparse.ArgumentParser(description='create metal script for inputs')
 parser.add_argument('--details', nargs='+', required=True, help='one or mor detail files')
 parser.add_argument('--output', type=argparse.FileType('w'), default=sys.stdout)
+parser.add_argument('--metalout', default='METAANALYSIS')
 
 args = parser.parse_args()
 
@@ -25,10 +26,10 @@ PROCESS $detail
 """
 t = Template(pop_stanza)
 
-foot="""OUTFILE metal_outfile.tbl
+foot="""OUTFILE %s .tbl
 ANALYZE
 QUIT
-"""
+""" % args.metalout
 
 args.output.write(head)
 for f in args.details:
