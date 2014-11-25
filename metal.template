@@ -31,6 +31,6 @@ EFFECT BETA
 STDERR   SE
 PVAL     P
 PROCESS outfile.4.zap.detail.txt 
-OUTFILE metal_outfile.tbl
+OUTFILE metal_outfile tbl
 ANALYZE
 QUIT
