@@ -1,20 +1,22 @@
 #!/bin/bash
 
 #BSUB -o /tmp/out.%J
+LSB_JOBID=666
 
 PLINK={{ plink }}
 EMMAX={{ emmax }}
 METAL={{ metal }}
 PYTHON={{ python }}
-
-
+LA3SDIR={{ la3sdir }}
+RUNDIR={{ rundir }}/la3s_{{ chrom }}_{{ from_bp }}
+mkdir -p $RUNDIR
 
 # per population
 {% for population in inputs %}
 
 # 1. Extract SNPs from segment
-TMPFILE=/tmp/${LSB_JOBID}_{{ population }}
-$PLINK --noweb --bfile {{ inputs[population].infile }} --chr {{ chrom }} --from-bp {{ from_kb }} --to-bp {{ to_kb }} --make-bed --out ${TMPFILE}_1
+TMPFILE=${RUNDIR}/${LSB_JOBID}_{{ population }}
+$PLINK --noweb --bfile {{ inputs[population].infile }} --chr {{ chrom }} --from-bp {{ from_bp }} --to-bp {{ to_bp }} --make-bed --out ${TMPFILE}_1
 
 $PLINK --bfile ${TMPFILE}_1 --freq --out ${TMPFILE}_frq
 
@@ -33,8 +35,8 @@ $PLINK --noweb --bfile ${TMPFILE}_1 --recode12 --output-missing-genotype 0 --tra
 
 # 3) add segment covariates
 COVFILE={{ inputs[population].covfile }}
-SEGCOV=${TMPFILE}_{{ population }}_{{ chrom }}_{{ from_kb }}_cov.txt
-$PYTHON segment_covariates.py --segments {{ segments }} --covariates $COVFILE --locus {{ chrom }}:{{ from_kb }} --output $SEGCOV
+SEGCOV=${TMPFILE}_{{ chrom }}_{{ from_bp }}_cov.txt
+$PYTHON ${LA3SDIR}/segment_covariates.py --segments {{ segments }} --covariates $COVFILE --locus {{ chrom }}:{{ from_bp }} --output $SEGCOV
 
 # 4) 
 # archivos requeridos para correr EMMAX
@@ -74,9 +76,11 @@ join -1 1 -2 1 ${TMPFILE}_chr.txt ${TMPFILE_4}_det.txt > ${TMPFILE_4}_detail.txt
 
 {% endfor %}
 # /per population
-METALSCRIPT=${TMPFILE}_{{ chrom }}_{{ from_kb }}.metal
-$PYTHON create_metal_script.py --details {% for population in inputs %}/tmp/${LSB_JOBID}_{{ population}}_4_detail.txt {% endfor %} \
-                               --output $METALSCRIPT
+METALSCRIPT=${RUNDIR}/script.metal
+$PYTHON ${LA3SDIR}/create_metal_script.py --details {% for population in inputs %}${RUNDIR}/${LSB_JOBID}_{{ population}}_4_detail.txt {% endfor %} \
+        --output $METALSCRIPT \
+        --metalout ${RUNDIR}/{{ chrom }}_{{ from_bp }}
+
 
 # 6) 
 $METAL $METALSCRIPT
