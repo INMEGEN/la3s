@@ -23,12 +23,15 @@ https://mathgen.stats.ox.ac.uk/impute/impute_v2.html#reference
 
 '''
 import subprocess
+from subprocess import STDOUT
 import argparse
 import os
+import logging
+import sys
 
 parser = argparse.ArgumentParser(description='Impute')
 
-parser.add_argument('--chr', choices=range(1,23), required=True, help="chromosome")
+parser.add_argument('--chr', choices=[str(i) for i in range(1,23)], required=True, help="chromosome")
 parser.add_argument('--ped', required=True)
 parser.add_argument('--map', required=True)
 parser.add_argument('--hdlfam', required=True)
@@ -38,89 +41,108 @@ parser.add_argument('--combined_mask', required=True, help='/path/to/genetic_map
 parser.add_argument('--hap_mask', required=True, help='/path/to/1000GP_Phase3_chr%s.hap.gz')
 parser.add_argument('--legend_mask', required=True, help='/path/to/1000GP_Phase3_chr%s.legend.gz')
 parser.add_argument('--outdir', required=True, help='no trailing slash!')
+parser.add_argument('--log', type=argparse.FileType('w'), default=sys.stdout)    
 
 args = parser.parse_args()
 
-gtool   = '/home/sromero/gtool_v0.7.5_x86_64_dynamic/gtool'
-impute2 = '/home/sromero/impute_v2.3.0_x86_64_dynamic/impute2'
-plink   = '/home/sromero/plink-1.07-x86_64/plink'
+logfile = args.log.name
+args.log.close()
+logging.basicConfig(filename=logfile, level=logging.DEBUG)
+
+gtool   = '/home/rgarcia/software/gtool'
+impute2 = '/home/rgarcia/software/impute_v2.3.2_x86_64_static/impute2'
+plink   = '/usr/bin/p-link'
 
 GEN    = args.outdir + '/' + os.path.split(args.map)[1][:-4] + '.gen'
 SAMPLE = args.outdir + '/' + os.path.split(args.map)[1][:-4] + '.sample'
 
-
-# Format plink files for gtool
-subprocess.check_output(
-    [ gtool, '-P',
-      '--ped', args.ped,
-      '--map', args.map,
-      '--og', GEN,
-      '--os', SAMPLE ] )
+# Format plink files for gtool, if they don't yet exist
+if not os.path.isfile(GEN) and not os.path.isfile(SAMPLE):
+    logging.debug('Running GTOOL')
+    gtool_out = subprocess.check_output(
+        [ gtool, '-P',
+          '--ped', args.ped,
+          '--map', args.map,
+          '--og', GEN,
+          '--os', SAMPLE ], stderr=STDOUT)
+    logging.debug(gtool_out)
 
 # prephase
 prephased = args.outdir + '/chr' + args.chr + '.prephased'
 combined  = args.combined_mask % args.chr
-subprocess.check_output(
+logging.debug('Running prephase')
+prephase_out = subprocess.check_output(
     [ impute2, '-prephase_g',
       '-m', combined,
       '-g', GEN,
-      '-int 1 1000000',
+      '-int', '1', '1000000',
       '-allow_large_regions',
-      '-Ne 20000',
-      '-o', prephased ] )
-
+      '-o', prephased ], stderr=STDOUT)
+logging.debug(prephase_out)
 
 
 # impute
 imputed  =  args.outdir + '/chr' + args.chr + '.imputed'
 hap      = args.hap_mask % args.chr
 legend   = args.legend_mask % args.chr
-subprocess.check_output(
+logging.debug('Running impute2')
+impute_out = subprocess.check_output(
     [ impute2, '-use_prephased_g',
       '-m', combined,
       '-h', hap,
       '-l', legend,
-      '-known_haps_g', prephased,
-      '-int 1 1000000',
+      '-known_haps_g', prephased + '_haps',
+      '-int', '1', '1000000',
       '-allow_large_regions',
-      '-Ne 20000',
-      '-o', imputed ] )
+      '-Ne', '20000',
+      '-o', imputed ], stderr=STDOUT )
+logging.debug(impute_out)
 
 
-### ANALISIS DE DATOS IMPUTADOS
 
-#    cat INDIGENAS_GWAS_519_TODASPOB.QC.UNIF_1_imputacion_prephase_large_info | awk '{print "1",$2,"0",$3}' | sed '1d' > INDIGENAS_GWAS_519_TODASPOB.QC.UNIF_1_imputacion_prephase_large.map
+# convert impute output to plink map file
+imputed_map = imputed.replace('.imputed', '_imputed.map')
+imputed_lines = open( imputed + '_info', 'r').readlines()
+logging.debug('Converting impute output to plink map')
+f = open( imputed_map, 'w')
+for l in imputed_lines[1:]:
+    fields = l.split()
+    snpid = fields[1]
+    if snpid.startswith('rs'):
+        subfields = snpid.split(':')
+        snpid = subfields[0]
+
+    f.write("1\t%s\t0\t%s\n" % (snpid, fields[2]))
+f.close()
 
 
-'''
-### ANALISIS PLINK
-
-#### HDL
-
-##### CHR 1 HASTA CHR 22
-'''
-subprocess.check_output( [
+# plink HDL analysis
+hdl_assoc = imputed.replace('.imputed', '_hdl')
+logging.debug('Running HDL plink')
+hdl_plink_out = subprocess.check_output( [
     plink, '--noweb',
-    '--dosage INDIGENAS_GWAS_519_TODASPOB.QC.UNIF_1_imputacion_prephase_large noheader skip0=1 skip1=1 format=3',
-    '--fam logHDL_GWAS.fam',
-    '--map INDIGENAS_GWAS_519_TODASPOB.QC.UNIF_1_imputacion_prephase_large.map',
+    '--dosage', imputed, 'noheader', 'skip0=1', 'skip1=1', 'format=3',
+    '--fam', args.hdlfam,
+    '--map', imputed_map,
     '--covar', args.cov,
     '--allow-no-sex',
     '--linear',
-    '--out INDIGENAS_GWAS_519_TODASPOB.QC.UNIF_1_imputacion_prephase_large.ASSOC',
-    '--ci 0.',])
-
+    '--out', hdl_assoc,
+    '--ci', '0.90'], stderr=STDOUT)
+logging.debug(hdl_plink_out)
 
 
 #### LDL
-##### CHR 1 HASTA CHR 22
-subprocess.check_output( [
+ldl_assoc = imputed.replace('.imputed', '_ldl')
+logging.debug('Running LDL plink')
+ldl_plink_out = subprocess.check_output( [
     plink, '--noweb',
-    '--dosage INDIGENAS_GWAS_519_TODASPOB.QC.UNIF_1_imputacion_prephase_large noheader skip0=1 skip1=1 format=3',
-    '--fam logLDL_GWAS.fam',
-    '--map INDIGENAS_GWAS_519_TODASPOB.QC.UNIF_1_imputacion_prephase_large.map',
+    '--dosage', imputed, 'noheader', 'skip0=1', 'skip1=1', 'format=3',
+    '--fam', args.ldlfam,
+    '--map', imputed_map,
     '--covar', args.cov,
     '--allow-no-sex',
     '--linear',
-    '--out INDIGENAS_GWAS_519_TODASPOB.QC.UNIF_1_imputacion_prephase_large.ASSOC',
-    '--ci 0.',])
+    '--out', ldl_assoc,
+    '--ci', '0.90'], stderr=STDOUT)
+logging.debug(ldl_plink_out)
