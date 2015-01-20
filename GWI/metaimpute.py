@@ -32,6 +32,8 @@ import sys
 parser = argparse.ArgumentParser(description='Impute')
 
 parser.add_argument('--chr', choices=[str(i) for i in range(1,23)], required=True, help="chromosome")
+parser.add_argument('--start', required=True)
+parser.add_argument('--end', required=True)
 parser.add_argument('--ped', required=True)
 parser.add_argument('--map', required=True)
 parser.add_argument('--hdlfam', required=True)
@@ -48,6 +50,8 @@ args = parser.parse_args()
 logfile = args.log.name
 args.log.close()
 logging.basicConfig(filename=logfile, level=logging.DEBUG)
+
+os.chdir(args.outdir)
 
 gtool   = '/home/rgarcia/software/gtool'
 impute2 = '/home/rgarcia/software/impute_v2.3.2_x86_64_static/impute2'
@@ -68,21 +72,21 @@ if not os.path.isfile(GEN) and not os.path.isfile(SAMPLE):
     logging.debug(gtool_out)
 
 # prephase
-prephased = args.outdir + '/chr' + args.chr + '.prephased'
+prephased = args.outdir + '/impute_' + args.chr + '_' + args.start + '_' + args.end + '.prephased'
 combined  = args.combined_mask % args.chr
 logging.debug('Running prephase')
 prephase_out = subprocess.check_output(
     [ impute2, '-prephase_g',
       '-m', combined,
       '-g', GEN,
-      '-int', '1', '1000000',
+      '-int', args.start, args.end,
       '-allow_large_regions',
       '-o', prephased ], stderr=STDOUT)
 logging.debug(prephase_out)
 
 
 # impute
-imputed  =  args.outdir + '/chr' + args.chr + '.imputed'
+imputed  = prephased.replace('.prephased', '.imputed')
 hap      = args.hap_mask % args.chr
 legend   = args.legend_mask % args.chr
 logging.debug('Running impute2')
@@ -92,7 +96,7 @@ impute_out = subprocess.check_output(
       '-h', hap,
       '-l', legend,
       '-known_haps_g', prephased + '_haps',
-      '-int', '1', '1000000',
+      '-int', args.start, args.end,
       '-allow_large_regions',
       '-Ne', '20000',
       '-o', imputed ], stderr=STDOUT )
