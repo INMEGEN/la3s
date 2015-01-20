@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #BSUB -o /tmp/out.%J
-LSB_JOBID=666
 
 PLINK={{ plink }}
 EMMAX={{ emmax }}
@@ -15,7 +14,7 @@ mkdir -p $RUNDIR
 {% for population in inputs %}
 
 # 1. Extract SNPs from segment
-TMPFILE=${RUNDIR}/${LSB_JOBID}_{{ population }}
+TMPFILE=${RUNDIR}/{{ population }}
 $PLINK --noweb --bfile {{ inputs[population].infile }} --chr {{ chrom }} --from-bp {{ from_bp }} --to-bp {{ to_bp }} --make-bed --out ${TMPFILE}_1
 
 $PLINK --bfile ${TMPFILE}_1 --freq --out ${TMPFILE}_frq
@@ -77,7 +76,7 @@ join -1 1 -2 1 ${TMPFILE}_chr.txt ${TMPFILE_4}_det.txt > ${TMPFILE_4}_detail.txt
 {% endfor %}
 # /per population
 METALSCRIPT=${RUNDIR}/script.metal
-$PYTHON ${LA3SDIR}/create_metal_script.py --details {% for population in inputs %}${RUNDIR}/${LSB_JOBID}_{{ population}}_4_detail.txt {% endfor %} \
+$PYTHON ${LA3SDIR}/create_metal_script.py --details {% for population in inputs %}${RUNDIR}/{{ population}}_4_detail.txt {% endfor %} \
         --output $METALSCRIPT \
         --metalout ${RUNDIR}/{{ chrom }}_{{ from_bp }}
 
