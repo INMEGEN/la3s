@@ -27,6 +27,8 @@ print "universe = vanilla"
 
 chr_boundaries = json.load(open('chr_boundaries.json','r'))
 
+window = 5000000
+
 for boundary in chr_boundaries:
     chrom = boundary['chr']
     start = boundary['start']
@@ -34,5 +36,5 @@ for boundary in chr_boundaries:
 
     n = start - 10000
     while n < end:
-        print job.substitute(chr=chrom, start=n, end=n+1000000)
-        n += 1000001
+        print job.substitute(chr=chrom, start=n, end=n+window)
+        n += window + 1
