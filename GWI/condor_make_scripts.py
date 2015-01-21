@@ -17,12 +17,13 @@ Arguments = metaimpute.py \\
           --outdir /home/rgarcia/la3s/GWI/out \\
           --log /home/rgarcia/la3s/GWI/out/impute_${chr}_${start}_${end}.log
 Error = /home/rgarcia/la3s/GWI/out/condor_${chr}_${start}_${end}.log
+Requirements = Machine == "gaia.inmegen.gob.mx"
 Queue
 ''')
 
 
 
-print "executable = python"
+print "executable = /usr/bin/python"
 print "universe = vanilla"
 
 chr_boundaries = json.load(open('chr_boundaries.json','r'))
