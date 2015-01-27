@@ -116,7 +116,7 @@ for l in imputed_lines[1:]:
         subfields = snpid.split(':')
         snpid = subfields[0]
 
-    f.write("1\t%s\t0\t%s\n" % (snpid, fields[2]))
+    f.write("%s\t%s\t0\t%s\n" % (args.chr, snpid, fields[2]))
 f.close()
 
 
@@ -136,6 +136,19 @@ hdl_plink_out = subprocess.check_output( [
 logging.debug(hdl_plink_out)
 
 
+# mark imputed or genotyped
+mark_imputed = os.path.split(os.path.realpath(__file__))[0] + "/mark_imputed.py"
+logging.debug('Running mark imputed for HDL')
+hdl_mark_out = subprocess.check_output( [
+    'python', mark_imputed,
+    '--output', hdl_assoc + ".assoc.marked.dosage",
+    '--dosage', hdl_assoc + ".assoc.dosage",
+    '--map', args.map], stderr=STDOUT)
+logging.debug(hdl_mark_out)
+
+
+
+
 #### LDL
 ldl_assoc = imputed.replace('.imputed', '_ldl')
 logging.debug('Running LDL plink')
@@ -150,3 +163,13 @@ ldl_plink_out = subprocess.check_output( [
     '--out', ldl_assoc,
     '--ci', '0.90'], stderr=STDOUT)
 logging.debug(ldl_plink_out)
+
+
+# mark imputed or genotyped
+logging.debug('Running mark imputed for LDL')
+ldl_mark_out = subprocess.check_output( [
+    'python', mark_imputed,
+    '--output', ldl_assoc + ".assoc.marked.dosage",
+    '--dosage', ldl_assoc + ".assoc.dosage",
+    '--map', args.map], stderr=STDOUT)
+logging.debug(ldl_mark_out)
