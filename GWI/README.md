@@ -103,7 +103,7 @@ https://mathgen.stats.ox.ac.uk/impute/impute_v2.html#reference
 
 #### HACER EL ARCHIVO .MAP PARA PODER ANALIZAR LOS RESULTADOS
 
-    cat INDIGENAS_GWAS_519_TODASPOB.QC.UNIF_1_imputacion_prephase_large_info | awk '{print "1",$2,"0",$3}' | sed '1d' > INDIGENAS_GWAS_519_TODASPOB.QC.UNIF_1_imputacion_prephase_large.map
+    cat INDIGENAS_GWAS_519_TODASPOB.QC.UNIF_1_imputacion_prephase_large_info | awk '{print "$CHR",$2,"0",$3}' | sed '1d' > INDIGENAS_GWAS_519_TODASPOB.QC.UNIF_1_imputacion_prephase_large.map
 
 
 
@@ -126,7 +126,7 @@ https://mathgen.stats.ox.ac.uk/impute/impute_v2.html#reference
     --out INDIGENAS_GWAS_519_TODASPOB.QC.UNIF_1_imputacion_prephase_large.ASSOC \
     --ci 0.90
 
-
+Agregar columna al archivo dosage donde se identifiquen como imputados o genotipificados. Genotipificados provienen del archivo .map.
 
 #### LDL
 
@@ -144,3 +144,5 @@ https://mathgen.stats.ox.ac.uk/impute/impute_v2.html#reference
     --linear \
     --out INDIGENAS_GWAS_519_TODASPOB.QC.UNIF_1_imputacion_prephase_large.ASSOC \
     --ci 0.90
+    
+Agregar columna al archivo dosage donde se identifiquen como imputados o genotipificados. Genotipificados provienen del archivo .map.
