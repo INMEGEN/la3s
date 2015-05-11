@@ -137,10 +137,10 @@ logging.debug(hdl_plink_out)
 
 
 # mark imputed or genotyped
-mark_imputed = os.path.split(os.path.realpath(__file__))[0] + "/mark_imputed.py"
+mark_imputed = "/home/rgarcia/la3s/GWI/mark_imputed.py"
 logging.debug('Running mark imputed for HDL')
 hdl_mark_out = subprocess.check_output( [
-    'python', mark_imputed,
+    '/usr/bin/python', mark_imputed,
     '--output', hdl_assoc + ".assoc.marked.dosage",
     '--dosage', hdl_assoc + ".assoc.dosage",
     '--map', args.map], stderr=STDOUT)
@@ -168,7 +168,7 @@ logging.debug(ldl_plink_out)
 # mark imputed or genotyped
 logging.debug('Running mark imputed for LDL')
 ldl_mark_out = subprocess.check_output( [
-    'python', mark_imputed,
+    '/usr/bin/python', mark_imputed,
     '--output', ldl_assoc + ".assoc.marked.dosage",
     '--dosage', ldl_assoc + ".assoc.dosage",
     '--map', args.map], stderr=STDOUT)
