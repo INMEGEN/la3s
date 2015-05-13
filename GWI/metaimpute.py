@@ -53,9 +53,10 @@ logging.basicConfig(filename=logfile, level=logging.DEBUG)
 
 os.chdir(args.outdir)
 
-gtool   = '/home/rgarcia/software/gtool'
-impute2 = '/home/rgarcia/software/impute_v2.3.2_x86_64_static/impute2'
-plink   = '/usr/bin/p-link'
+gtool   = '/export/home/rgarcia/software/gtool'
+impute2 = '/export/home/rgarcia/software/impute_v2.3.2_x86_64_static/impute2'
+plink   = '/share/apps/gplink-1.07-x86_64/plink'
+python  = '/share/apps/Python-2.7.3/bin/python'
 
 GEN    = args.outdir + '/' + os.path.split(args.map)[1][:-4] + '.gen'
 SAMPLE = args.outdir + '/' + os.path.split(args.map)[1][:-4] + '.sample'
@@ -137,10 +138,10 @@ logging.debug(hdl_plink_out)
 
 
 # mark imputed or genotyped
-mark_imputed = "/home/rgarcia/la3s/GWI/mark_imputed.py"
+mark_imputed = "/export/home/rgarcia/la3s/GWI/mark_imputed.py"
 logging.debug('Running mark imputed for HDL')
 hdl_mark_out = subprocess.check_output( [
-    '/usr/bin/python', mark_imputed,
+    python, mark_imputed,
     '--output', hdl_assoc + ".assoc.marked.dosage",
     '--dosage', hdl_assoc + ".assoc.dosage",
     '--map', args.map], stderr=STDOUT)
@@ -168,7 +169,7 @@ logging.debug(ldl_plink_out)
 # mark imputed or genotyped
 logging.debug('Running mark imputed for LDL')
 ldl_mark_out = subprocess.check_output( [
-    '/usr/bin/python', mark_imputed,
+    python, mark_imputed,
     '--output', ldl_assoc + ".assoc.marked.dosage",
     '--dosage', ldl_assoc + ".assoc.dosage",
     '--map', args.map], stderr=STDOUT)
