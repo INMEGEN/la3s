@@ -20,7 +20,7 @@ for locus in loci:
     (chrom, offset) = locus.split(":")
     strloci.append("%02d:%010d" % (int(chrom), int(offset)))
 
-
+strloci.sort()
 
 for i in range(0,len(strloci)):
     (chrom, from_bp)    = [int(n) for n in strloci[i].split(":")]
