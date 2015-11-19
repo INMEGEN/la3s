@@ -3,6 +3,7 @@
 Asociación de polimorfismos a rasgos metabólicos utilizando
 microarreglos de genotipificación ajustando por ancestría local.
 
+<img src="pipeline_diagram.png">
 
 ***
 

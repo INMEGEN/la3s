@@ -1,0 +1,1424 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by diasvg.py -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="980.85211"
+   height="1290.14"
+   viewBox="-1.111 17.95 26.868172 49.673277"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="pipeline_diagram.svg">
+  <metadata
+     id="metadata308">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs306" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1278"
+     inkscape:window-height="1598"
+     id="namedview304"
+     showgrid="false"
+     inkscape:zoom="0.77562998"
+     inkscape:cx="577.43238"
+     inkscape:cy="548.82487"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showborder="false" />
+  <path
+     d="m -6.1078156,50.91 c 1.157,-0.875 1.735,-1.167 2.892,-1.167 1.157,0 1.735,0.292 2.89199996,1.167 l 0,4.667 c -1.15699996,0.875 -1.73499996,1.166 -2.89199996,1.166 -1.157,0 -1.735,-0.291 -2.892,-1.166 l 0,-4.667"
+     id="path4"
+     inkscape:connector-curvature="0"
+     style="fill:#ffe18b;stroke:none" />
+  <path
+     d="m -6.1078156,50.91 c 1.157,-0.875 1.735,-1.167 2.892,-1.167 1.157,0 1.735,0.292 2.89199996,1.167 l 0,4.667 c -1.15699996,0.875 -1.73499996,1.166 -2.89199996,1.166 -1.157,0 -1.735,-0.291 -2.892,-1.166 l 0,-4.667"
+     id="path6"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <path
+     d="m -6.1078156,50.91 c 1.157,0.875 1.735,1.167 2.892,1.167 1.157,0 1.735,-0.292 2.89199996,-1.167"
+     id="path8"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <text
+     x="-3.2158155"
+     y="53.626999"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text10"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">NAHUA</text>
+  <text
+     x="-3.2158155"
+     y="54.426998"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text12"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">- covariates</text>
+  <path
+     d="m -6.9888156,57.736 7.52199996,0 c 1.12800004,0.94 1.50400004,1.41 1.50400004,2.35 0,0.94 -0.376,1.41 -1.50400004,2.35 l -7.52199996,0 c -1.129,-0.94 -1.505,-1.41 -1.505,-2.35 0,-0.94 0.376,-1.41 1.505,-2.35"
+     id="path14"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff;stroke:none" />
+  <path
+     d="m -6.9888156,57.736 7.52199996,0 c 1.12800004,0.94 1.50400004,1.41 1.50400004,2.35 0,0.94 -0.376,1.41 -1.50400004,2.35 l -7.52199996,0 c -1.129,-0.94 -1.505,-1.41 -1.505,-2.35 0,-0.94 0.376,-1.41 1.505,-2.35"
+     id="path16"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <path
+     d="m 0.53318436,57.736 c -1.129,0.94 -1.505,1.41 -1.505,2.35 0,0.94 0.376,1.41 1.505,2.35"
+     id="path18"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <text
+     x="-4.7244148"
+     y="59.935642"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text20"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">INDIGENAS GWAS</text>
+  <text
+     x="-3.8805356"
+     y="60.983841"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text22"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">FRQ</text>
+  <path
+     d="m -6.0768156,45.607 c 1.157,-0.875 1.735,-1.167 2.892,-1.167 1.157,0 1.735,0.292 2.89199996,1.167 l 0,4.666 c -1.15699996,0.875 -1.73499996,1.167 -2.89199996,1.167 -1.157,0 -1.735,-0.292 -2.892,-1.167 l 0,-4.666"
+     id="path24"
+     inkscape:connector-curvature="0"
+     style="fill:#ffe18b;stroke:none" />
+  <path
+     d="m -6.0768156,45.607 c 1.157,-0.875 1.735,-1.167 2.892,-1.167 1.157,0 1.735,0.292 2.89199996,1.167 l 0,4.666 c -1.15699996,0.875 -1.73499996,1.167 -2.89199996,1.167 -1.157,0 -1.735,-0.292 -2.892,-1.167 l 0,-4.666"
+     id="path26"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <path
+     d="m -6.0768156,45.607 c 1.157,0.875 1.735,1.166 2.892,1.166 1.157,0 1.735,-0.291 2.89199996,-1.166"
+     id="path28"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <text
+     x="-3.1848154"
+     y="48.323002"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text30"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">MAYA</text>
+  <text
+     x="-3.1848154"
+     y="49.123001"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text32"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">- covariates</text>
+  <path
+     d="m -6.0458156,40.374 c 1.157,-0.875 1.735,-1.166 2.892,-1.166 1.157,0 1.735,0.291 2.89199996,1.166 l 0,4.667 c -1.15699996,0.875 -1.73499996,1.167 -2.89199996,1.167 -1.157,0 -1.735,-0.292 -2.892,-1.167 l 0,-4.667"
+     id="path34"
+     inkscape:connector-curvature="0"
+     style="fill:#ffe18b;stroke:none" />
+  <path
+     d="m -6.0458156,40.374 c 1.157,-0.875 1.735,-1.166 2.892,-1.166 1.157,0 1.735,0.291 2.89199996,1.166 l 0,4.667 c -1.15699996,0.875 -1.73499996,1.167 -2.89199996,1.167 -1.157,0 -1.735,-0.292 -2.892,-1.167 l 0,-4.667"
+     id="path36"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <path
+     d="m -6.0458156,40.374 c 1.157,0.875 1.735,1.167 2.892,1.167 1.157,0 1.735,-0.292 2.89199996,-1.167"
+     id="path38"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <text
+     x="-3.1538157"
+     y="43.091"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text40"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">TOTONACA</text>
+  <text
+     x="-3.1538157"
+     y="43.890999"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text42"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">- covariates</text>
+  <path
+     d="m -6.0148156,35.212 c 1.157,-0.875 1.735,-1.166 2.892,-1.166 1.157,0 1.735,0.291 2.89199996,1.166 l 0,4.667 c -1.15699996,0.875 -1.73499996,1.167 -2.89199996,1.167 -1.157,0 -1.735,-0.292 -2.892,-1.167 l 0,-4.667"
+     id="path44"
+     inkscape:connector-curvature="0"
+     style="fill:#ffe18b;stroke:none" />
+  <path
+     d="m -6.0148156,35.212 c 1.157,-0.875 1.735,-1.166 2.892,-1.166 1.157,0 1.735,0.291 2.89199996,1.166 l 0,4.667 c -1.15699996,0.875 -1.73499996,1.167 -2.89199996,1.167 -1.157,0 -1.735,-0.292 -2.892,-1.167 l 0,-4.667"
+     id="path46"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <path
+     d="m -6.0148156,35.212 c 1.157,0.875 1.735,1.167 2.892,1.167 1.157,0 1.735,-0.292 2.89199996,-1.167"
+     id="path48"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <text
+     x="-3.1228156"
+     y="37.929001"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text50"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">ZAPOTECA</text>
+  <text
+     x="-3.1228156"
+     y="38.729"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text52"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">- covariates</text>
+  <path
+     d="M -0.67681564,19.167 C 0.48018436,18.292 1.0581844,18 2.2151844,18 c 1.157,0 1.735,0.292 2.892,1.167 l 0,4.666 c -1.157,0.875 -1.735,1.167 -2.892,1.167 -1.157,0 -1.73500004,-0.292 -2.89200004,-1.167 l 0,-4.666"
+     id="path54"
+     inkscape:connector-curvature="0"
+     style="fill:#aaff8b;stroke:none" />
+  <path
+     d="M -0.67681564,19.167 C 0.48018436,18.292 1.0581844,18 2.2151844,18 c 1.157,0 1.735,0.292 2.892,1.167 l 0,4.666 c -1.157,0.875 -1.735,1.167 -2.892,1.167 -1.157,0 -1.73500004,-0.292 -2.89200004,-1.167 l 0,-4.666"
+     id="path56"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <path
+     d="m -0.67681564,19.167 c 1.157,0.875 1.73500004,1.166 2.89200004,1.166 1.157,0 1.735,-0.291 2.892,-1.166"
+     id="path58"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <text
+     x="2.2151842"
+     y="21.882999"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text60"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">NAHUA</text>
+  <text
+     x="2.2151842"
+     y="22.683001"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text62"
+     style="font-size:0.61603582px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+     sodipodi:linespacing="125%">- bed, bim, fam</text>
+  <path
+     d="m 6.2131844,19.167 c 1.157,-0.875 1.735,-1.167 2.892,-1.167 1.1569996,0 1.7349996,0.292 2.8919996,1.167 l 0,4.666 c -1.157,0.875 -1.735,1.167 -2.8919996,1.167 -1.157,0 -1.735,-0.292 -2.892,-1.167 l 0,-4.666"
+     id="path64"
+     inkscape:connector-curvature="0"
+     style="fill:#aaff8b;stroke:none" />
+  <path
+     d="m 6.2131844,19.167 c 1.157,-0.875 1.735,-1.167 2.892,-1.167 1.1569996,0 1.7349996,0.292 2.8919996,1.167 l 0,4.666 c -1.157,0.875 -1.735,1.167 -2.8919996,1.167 -1.157,0 -1.735,-0.292 -2.892,-1.167 l 0,-4.666"
+     id="path66"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <path
+     d="m 6.2131844,19.167 c 1.157,0.875 1.735,1.166 2.892,1.166 1.1569996,0 1.7349996,-0.291 2.8919996,-1.166"
+     id="path68"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <text
+     x="9.1051846"
+     y="21.882999"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text70"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">MAYA</text>
+  <text
+     x="9.1051846"
+     y="22.683001"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text72"
+     style="font-size:0.61603582px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+     sodipodi:linespacing="125%">- bed, bim, fam</text>
+  <path
+     d="m 13.103184,19.167 c 1.157,-0.875 1.735,-1.167 2.892,-1.167 1.157,0 1.735,0.292 2.892,1.167 l 0,4.666 c -1.157,0.875 -1.735,1.167 -2.892,1.167 -1.157,0 -1.735,-0.292 -2.892,-1.167 l 0,-4.666"
+     id="path74"
+     inkscape:connector-curvature="0"
+     style="fill:#aaff8b;stroke:none" />
+  <path
+     d="m 13.103184,19.167 c 1.157,-0.875 1.735,-1.167 2.892,-1.167 1.157,0 1.735,0.292 2.892,1.167 l 0,4.666 c -1.157,0.875 -1.735,1.167 -2.892,1.167 -1.157,0 -1.735,-0.292 -2.892,-1.167 l 0,-4.666"
+     id="path76"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <path
+     d="m 13.103184,19.167 c 1.157,0.875 1.735,1.166 2.892,1.166 1.157,0 1.735,-0.291 2.892,-1.166"
+     id="path78"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <text
+     x="15.995184"
+     y="21.882999"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text80"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">TOTONACA</text>
+  <text
+     x="15.995184"
+     y="22.683001"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text82"
+     style="font-size:0.61603582px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+     sodipodi:linespacing="125%">- bed, bim, fam</text>
+  <path
+     d="m 19.993184,19.167 c 1.157,-0.875 1.735,-1.167 2.892,-1.167 1.157,0 1.735,0.292 2.892,1.167 l 0,4.666 c -1.157,0.875 -1.735,1.167 -2.892,1.167 -1.157,0 -1.735,-0.292 -2.892,-1.167 l 0,-4.666"
+     id="path84"
+     inkscape:connector-curvature="0"
+     style="fill:#aaff8b;stroke:none" />
+  <path
+     d="m 19.993184,19.167 c 1.157,-0.875 1.735,-1.167 2.892,-1.167 1.157,0 1.735,0.292 2.892,1.167 l 0,4.666 c -1.157,0.875 -1.735,1.167 -2.892,1.167 -1.157,0 -1.735,-0.292 -2.892,-1.167 l 0,-4.666"
+     id="path86"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <path
+     d="m 19.993184,19.167 c 1.157,0.875 1.735,1.166 2.892,1.166 1.157,0 1.735,-0.291 2.892,-1.166"
+     id="path88"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <text
+     x="22.885185"
+     y="21.882999"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text90"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">ZAPOTECA</text>
+  <text
+     x="22.885185"
+     y="22.683001"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text92"
+     style="font-size:0.61603582px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+     sodipodi:linespacing="125%">- bed, bim, fam</text>
+  <rect
+     x="8.5461845"
+     y="28.549999"
+     width="7.5079999"
+     height="1.9"
+     id="rect94"
+     style="fill:#ffffff;stroke:none" />
+  <rect
+     x="8.5461845"
+     y="28.549999"
+     width="7.5079999"
+     height="1.9"
+     id="rect96"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <text
+     x="12.300184"
+     y="29.695"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text98"
+     style="font-size:0.69304025px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+     sodipodi:linespacing="125%">Generate Segments</text>
+  <rect
+     style="fill:#ffffff;stroke:none"
+     x="7.1891842"
+     y="32.75"
+     width="10.222"
+     height="2.7"
+     id="rect100" />
+  <rect
+     x="10.142185"
+     y="37.848"
+     width="4.3150001"
+     height="2.7"
+     id="rect108"
+     style="fill:#ffffff;stroke:none" />
+  <rect
+     x="8.2371845"
+     y="43.606998"
+     width="8.125"
+     height="1.9"
+     id="rect116"
+     style="fill:#ffffff;stroke:none" />
+  <rect
+     x="10.556185"
+     y="51.499001"
+     width="3.4879999"
+     height="1.9"
+     id="rect122"
+     style="fill:#ffffff;stroke:none" />
+  <path
+     d="m 9.5041844,59.027 5.5919996,0 1.119,1 -1.119,1 -5.5919996,0 -1.119,-1 1.119,-1"
+     id="path128"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff;stroke:none" />
+  <line
+     x1="2.0861845"
+     y1="60.070999"
+     x2="7.8811846"
+     y2="60.048"
+     id="line134"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="15.188,59.799 15.689,60.047 15.19,60.299 15.314,60.048 "
+     id="polygon136"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="15.188,59.799 15.689,60.047 15.19,60.299 15.314,60.048 "
+     id="polygon138"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <path
+     d="m 10.328184,63.929 3.944,0 0,2.829 c -0.789,-0.472 -1.183,-0.472 -1.972,0 -0.789,0.471 -1.183,0.471 -1.972,0 l 0,-2.829"
+     id="path140"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff;stroke:none" />
+  <line
+     x1="5.1561842"
+     y1="23.833"
+     x2="10.657185"
+     y2="28.197001"
+     id="line148"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="18.148,27.923 18.384,28.43 17.837,28.315 18.09,28.197 "
+     id="polygon150"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="18.148,27.923 18.384,28.43 17.837,28.315 18.09,28.197 "
+     id="polygon152"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <line
+     x1="10.438185"
+     y1="24.837999"
+     x2="11.720184"
+     y2="28.047001"
+     id="line154"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="19.339,27.839 19.292,28.396 18.874,28.024 19.153,28.047 "
+     id="polygon156"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="19.339,27.839 19.292,28.396 18.874,28.024 19.153,28.047 "
+     id="polygon158"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <line
+     x1="14.485184"
+     y1="24.77"
+     x2="12.966185"
+     y2="28.058001"
+     id="line160"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="20.678,28.049 20.242,28.398 20.225,27.839 20.399,28.058 "
+     id="polygon162"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="20.678,28.049 20.242,28.398 20.225,27.839 20.399,28.058 "
+     id="polygon164"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <line
+     x1="19.944185"
+     y1="23.723"
+     x2="14.012184"
+     y2="28.205999"
+     id="line166"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="21.695,28.33 21.146,28.432 21.394,27.931 21.445,28.206 "
+     id="polygon168"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="21.695,28.33 21.146,28.432 21.394,27.931 21.445,28.206 "
+     id="polygon170"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <path
+     d="m 23.294184,51.016 c 1.156,-0.875 1.735,-1.166 2.891,-1.166 1.157,0 1.736,0.291 2.892,1.166 l 0,4.667 c -1.156,0.875 -1.735,1.167 -2.892,1.167 -1.156,0 -1.735,-0.292 -2.891,-1.167 l 0,-4.667"
+     id="path172"
+     inkscape:connector-curvature="0"
+     style="fill:#e5e5e5;stroke:none" />
+  <path
+     d="m 23.294184,51.016 c 1.156,-0.875 1.735,-1.166 2.891,-1.166 1.157,0 1.736,0.291 2.892,1.166 l 0,4.667 c -1.156,0.875 -1.735,1.167 -2.892,1.167 -1.156,0 -1.735,-0.292 -2.891,-1.167 l 0,-4.667"
+     id="path174"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <path
+     d="m 23.294184,51.016 c 1.156,0.875 1.735,1.167 2.891,1.167 1.157,0 1.736,-0.292 2.892,-1.167"
+     id="path176"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <text
+     x="26.185184"
+     y="53.333"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text178"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">NAHUA</text>
+  <text
+     x="26.185184"
+     y="54.132999"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text180"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">- Phenotype</text>
+  <text
+     x="26.185184"
+     y="54.932999"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text182"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">- Kinship</text>
+  <path
+     d="m 23.325184,45.713 c 1.156,-0.875 1.735,-1.167 2.892,-1.167 1.156,0 1.735,0.292 2.891,1.167 l 0,4.667 c -1.156,0.875 -1.735,1.166 -2.891,1.166 -1.157,0 -1.736,-0.291 -2.892,-1.166 l 0,-4.667"
+     id="path184"
+     inkscape:connector-curvature="0"
+     style="fill:#e5e5e5;stroke:none" />
+  <path
+     d="m 23.325184,45.713 c 1.156,-0.875 1.735,-1.167 2.892,-1.167 1.156,0 1.735,0.292 2.891,1.167 l 0,4.667 c -1.156,0.875 -1.735,1.166 -2.891,1.166 -1.157,0 -1.736,-0.291 -2.892,-1.166 l 0,-4.667"
+     id="path186"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <path
+     d="m 23.325184,45.713 c 1.156,0.875 1.735,1.167 2.892,1.167 1.156,0 1.735,-0.292 2.891,-1.167"
+     id="path188"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <text
+     x="26.217186"
+     y="48.029999"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text190"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">MAYA</text>
+  <text
+     x="26.217186"
+     y="48.830002"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text192"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">- Phenotype</text>
+  <text
+     x="26.217186"
+     y="49.630001"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text194"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">- Kinship</text>
+  <path
+     d="m 23.356184,40.48 c 1.156,-0.875 1.735,-1.166 2.892,-1.166 1.156,0 1.735,0.291 2.891,1.166 l 0,4.667 c -1.156,0.875 -1.735,1.167 -2.891,1.167 -1.157,0 -1.736,-0.292 -2.892,-1.167 l 0,-4.667"
+     id="path196"
+     inkscape:connector-curvature="0"
+     style="fill:#e5e5e5;stroke:none" />
+  <path
+     d="m 23.356184,40.48 c 1.156,-0.875 1.735,-1.166 2.892,-1.166 1.156,0 1.735,0.291 2.891,1.166 l 0,4.667 c -1.156,0.875 -1.735,1.167 -2.891,1.167 -1.157,0 -1.736,-0.292 -2.892,-1.167 l 0,-4.667"
+     id="path198"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <path
+     d="m 23.356184,40.48 c 1.156,0.875 1.735,1.167 2.892,1.167 1.156,0 1.735,-0.292 2.891,-1.167"
+     id="path200"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <text
+     x="26.248184"
+     y="42.797001"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text202"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">TOTONACA</text>
+  <text
+     x="26.248184"
+     y="43.597"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text204"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">- Phenotype</text>
+  <text
+     x="26.248184"
+     y="44.396999"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text206"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">- Kinship</text>
+  <path
+     d="m 23.387184,35.318 c 1.157,-0.875 1.735,-1.166 2.892,-1.166 1.156,0 1.735,0.291 2.892,1.166 l 0,4.667 c -1.157,0.875 -1.736,1.167 -2.892,1.167 -1.157,0 -1.735,-0.292 -2.892,-1.167 l 0,-4.667"
+     id="path208"
+     inkscape:connector-curvature="0"
+     style="fill:#e5e5e5;stroke:none" />
+  <path
+     d="m 23.387184,35.318 c 1.157,-0.875 1.735,-1.166 2.892,-1.166 1.156,0 1.735,0.291 2.892,1.166 l 0,4.667 c -1.157,0.875 -1.736,1.167 -2.892,1.167 -1.157,0 -1.735,-0.292 -2.892,-1.167 l 0,-4.667"
+     id="path210"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <path
+     d="m 23.387184,35.318 c 1.157,0.875 1.735,1.167 2.892,1.167 1.156,0 1.735,-0.292 2.892,-1.167"
+     id="path212"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <text
+     x="26.279186"
+     y="37.634998"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text214"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">ZAPOTECA</text>
+  <text
+     x="26.279186"
+     y="38.435001"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text216"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">- Phenotype</text>
+  <text
+     x="26.279186"
+     y="39.235001"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text218"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">- Kinship</text>
+  <line
+     x1="-0.2308155"
+     y1="38.421001"
+     x2="7.8331842"
+     y2="43.812"
+     id="line220"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="15.301,43.534 15.577,44.02 15.023,43.95 15.266,43.812 "
+     id="polygon222"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="15.301,43.534 15.577,44.02 15.023,43.95 15.266,43.812 "
+     id="polygon224"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <line
+     x1="-0.21381578"
+     y1="43.185001"
+     x2="7.757184"
+     y2="44.479"
+     id="line226"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="15.107,44.213 15.56,44.539 15.026,44.706 15.19,44.479 "
+     id="polygon228"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="15.107,44.213 15.56,44.539 15.026,44.706 15.19,44.479 "
+     id="polygon230"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <line
+     x1="-0.29281577"
+     y1="47.356998"
+     x2="7.7681847"
+     y2="45.16"
+     id="line232"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="15.014,44.952 15.562,45.062 15.146,45.434 15.201,45.16 "
+     id="polygon234"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="15.014,44.952 15.562,45.062 15.146,45.434 15.201,45.16 "
+     id="polygon236"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <line
+     x1="-0.32381544"
+     y1="52.66"
+     x2="7.8641844"
+     y2="45.819"
+     id="line238"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="15.041,45.708 15.585,45.579 15.361,46.091 15.297,45.819 "
+     id="polygon240"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="15.041,45.708 15.585,45.579 15.361,46.091 15.297,45.819 "
+     id="polygon242"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <line
+     x1="23.387184"
+     y1="38.527"
+     x2="14.321184"
+     y2="51.574001"
+     id="line244"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="22.031,51.614 21.54,51.882 21.62,51.329 21.754,51.574 "
+     id="polygon246"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="22.031,51.614 21.54,51.882 21.62,51.329 21.754,51.574 "
+     id="polygon248"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <line
+     x1="23.356184"
+     y1="43.688999"
+     x2="14.398184"
+     y2="52.115002"
+     id="line250"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="22.093,52.212 21.558,52.372 21.751,51.847 21.831,52.115 "
+     id="polygon252"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="22.093,52.212 21.558,52.372 21.751,51.847 21.831,52.115 "
+     id="polygon254"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <line
+     x1="23.325184"
+     y1="48.921001"
+     x2="14.491184"
+     y2="52.730999"
+     id="line256"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="22.137,52.911 21.579,52.879 21.939,52.452 21.924,52.731 "
+     id="polygon258"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="22.137,52.911 21.579,52.879 21.939,52.452 21.924,52.731 "
+     id="polygon260"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <line
+     x1="23.244184"
+     y1="53.361"
+     x2="14.530184"
+     y2="53.396999"
+     id="line262"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="22.089,53.646 21.588,53.398 22.087,53.146 21.963,53.397 "
+     id="polygon264"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="22.089,53.646 21.588,53.398 22.087,53.146 21.963,53.397 "
+     id="polygon266"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <line
+     x1="12.300184"
+     y1="30.450001"
+     x2="12.300184"
+     y2="32.263"
+     id="line268"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="19.983,32.138 19.733,32.638 19.483,32.138 19.733,32.263 "
+     id="polygon270"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="19.983,32.138 19.733,32.638 19.483,32.138 19.733,32.263 "
+     id="polygon272"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <line
+     x1="12.300184"
+     y1="35.5"
+     x2="12.300184"
+     y2="37.312"
+     id="line274"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="19.983,37.187 19.733,37.687 19.483,37.187 19.733,37.312 "
+     id="polygon276"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="19.983,37.187 19.733,37.687 19.483,37.187 19.733,37.312 "
+     id="polygon278"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <line
+     x1="12.300184"
+     y1="40.598999"
+     x2="12.300184"
+     y2="43.07"
+     id="line280"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="19.983,42.945 19.733,43.445 19.483,42.945 19.733,43.07 "
+     id="polygon282"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="19.983,42.945 19.733,43.445 19.483,42.945 19.733,43.07 "
+     id="polygon284"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="19.483,50.837 19.733,50.962 19.983,50.837 19.733,51.337 "
+     id="polygon288"
+     transform="translate(-7.4328156,-0.46202682)"
+     style="fill:#000000;stroke:none" />
+  <polygon
+     points="19.983,50.837 19.733,51.337 19.483,50.837 19.733,50.962 "
+     id="polygon290"
+     transform="translate(-7.4328156,-0.46202682)"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <line
+     x1="12.300184"
+     y1="61.027"
+     x2="12.300184"
+     y2="63.393002"
+     id="line292"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="19.983,63.268 19.733,63.768 19.483,63.268 19.733,63.393 "
+     id="polygon294"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="19.983,63.268 19.733,63.768 19.483,63.268 19.733,63.393 "
+     id="polygon296"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <line
+     x1="12.300184"
+     y1="53.448002"
+     x2="12.300184"
+     y2="58.540001"
+     id="line298"
+     style="stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="19.983,58.415 19.733,58.915 19.483,58.415 19.733,58.54 "
+     id="polygon300"
+     style="fill:#000000;stroke:none"
+     transform="translate(-7.4328156,0)" />
+  <polygon
+     points="19.983,58.415 19.733,58.915 19.483,58.415 19.733,58.54 "
+     id="polygon302"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-7.4328156,0)" />
+  <g
+     id="g4077"
+     transform="translate(-7.4328156,0)">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       id="rect102"
+       height="2.7992806"
+       width="12.257239"
+       y="32.650719"
+       x="13.629201" />
+    <text
+       id="text104"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="33.895"
+       x="19.733"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">Extract SNPs from segments</text>
+    <text
+       sodipodi:linespacing="125%"
+       style="font-size:0.69304025px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       id="text106"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="34.695"
+       x="19.733">PLINK</text>
+  </g>
+  <g
+     id="g4082"
+     transform="translate(-7.2788067,0.15400894)">
+    <rect
+       x="13.629201"
+       y="32.650719"
+       width="12.257239"
+       height="2.7992806"
+       id="rect4084"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1" />
+    <text
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans"
+       x="19.733"
+       y="33.895"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4086">Extract SNPs from segments</text>
+    <text
+       x="19.733"
+       y="34.695"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4088"
+       style="font-size:0.69304025px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       sodipodi:linespacing="125%">PLINK</text>
+  </g>
+  <g
+     transform="translate(-7.1247978,0.30801788)"
+     id="g4090">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       id="rect4092"
+       height="2.7992806"
+       width="12.257239"
+       y="32.650719"
+       x="13.629201" />
+    <text
+       id="text4094"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="33.895"
+       x="19.733"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">Extract SNPs from segments</text>
+    <text
+       sodipodi:linespacing="125%"
+       style="font-size:0.69304025px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       id="text4096"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="34.695"
+       x="19.733">PLINK</text>
+  </g>
+  <g
+     id="g4098"
+     transform="translate(-6.9707888,0.46202682)">
+    <rect
+       x="13.629201"
+       y="32.650719"
+       width="12.257239"
+       height="2.7992806"
+       id="rect4100"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1" />
+    <text
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans"
+       x="19.733"
+       y="33.895"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4102">Extract SNPs from segments</text>
+    <text
+       x="19.733"
+       y="34.695"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4104"
+       style="font-size:0.69304025px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       sodipodi:linespacing="125%">PLINK</text>
+  </g>
+  <g
+     id="g4106"
+     transform="translate(-7.4328156,0)">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       id="rect110"
+       height="2.7"
+       width="4.3150001"
+       y="37.848"
+       x="17.575001" />
+    <text
+       id="text112"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="38.993"
+       x="19.733"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">Transpose</text>
+    <text
+       id="text114"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="39.792999"
+       x="19.733"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">PLINK</text>
+  </g>
+  <g
+     id="g4111"
+     transform="translate(-7.2788067,0.15400894)">
+    <rect
+       x="17.575001"
+       y="37.848"
+       width="4.3150001"
+       height="2.7"
+       id="rect4113"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1" />
+    <text
+       x="19.733"
+       y="38.993"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4115"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">Transpose</text>
+    <text
+       x="19.733"
+       y="39.792999"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4117"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">PLINK</text>
+  </g>
+  <g
+     transform="translate(-7.1247978,0.30801788)"
+     id="g4119">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       id="rect4121"
+       height="2.7"
+       width="4.3150001"
+       y="37.848"
+       x="17.575001" />
+    <text
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans"
+       id="text4123"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="38.993"
+       x="19.733">Transpose</text>
+    <text
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans"
+       id="text4125"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="39.792999"
+       x="19.733">PLINK</text>
+  </g>
+  <g
+     id="g4127"
+     transform="translate(-6.9707888,0.46202682)">
+    <rect
+       x="17.575001"
+       y="37.848"
+       width="4.3150001"
+       height="2.7"
+       id="rect4129"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1" />
+    <text
+       x="19.733"
+       y="38.993"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4131"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">Transpose</text>
+    <text
+       x="19.733"
+       y="39.792999"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4133"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">PLINK</text>
+  </g>
+  <g
+     id="g4135"
+     transform="translate(-7.4328156,0)">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       id="rect118"
+       height="1.9"
+       width="8.125"
+       y="43.606998"
+       x="15.67" />
+    <text
+       sodipodi:linespacing="125%"
+       style="font-size:0.69304025px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       id="text120"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="44.751999"
+       x="19.733">Create Covariates File</text>
+  </g>
+  <g
+     id="g4139"
+     transform="translate(-7.2788067,0.15400894)">
+    <rect
+       x="15.67"
+       y="43.606998"
+       width="8.125"
+       height="1.9"
+       id="rect4141"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1" />
+    <text
+       x="19.733"
+       y="44.751999"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4143"
+       style="font-size:0.69304025px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       sodipodi:linespacing="125%">Create Covariates File</text>
+  </g>
+  <g
+     transform="translate(-7.1247978,0.30801788)"
+     id="g4145">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       id="rect4147"
+       height="1.9"
+       width="8.125"
+       y="43.606998"
+       x="15.67" />
+    <text
+       sodipodi:linespacing="125%"
+       style="font-size:0.69304025px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       id="text4149"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="44.751999"
+       x="19.733">Create Covariates File</text>
+  </g>
+  <g
+     id="g4151"
+     transform="translate(-6.9707888,0.46202682)">
+    <rect
+       x="15.67"
+       y="43.606998"
+       width="8.125"
+       height="1.9"
+       id="rect4153"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1" />
+    <text
+       x="19.733"
+       y="44.751999"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4155"
+       style="font-size:0.69304025px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       sodipodi:linespacing="125%">Create Covariates File</text>
+  </g>
+  <g
+     id="g4157"
+     transform="translate(-7.9718469,-0.46202682)">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       id="rect124"
+       height="1.9"
+       width="3.4879999"
+       y="51.499001"
+       x="17.989" />
+    <text
+       id="text126"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="52.644001"
+       x="19.733"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">EMMAX</text>
+  </g>
+  <g
+     transform="translate(-7.817838,-0.30801788)"
+     id="g4161">
+    <rect
+       x="17.989"
+       y="51.499001"
+       width="3.4879999"
+       height="1.9"
+       id="rect4163"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1" />
+    <text
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans"
+       x="19.733"
+       y="52.644001"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4165">EMMAX</text>
+  </g>
+  <g
+     id="g4167"
+     transform="translate(-7.6638291,-0.15400894)">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       id="rect4169"
+       height="1.9"
+       width="3.4879999"
+       y="51.499001"
+       x="17.989" />
+    <text
+       id="text4171"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="52.644001"
+       x="19.733"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">EMMAX</text>
+  </g>
+  <g
+     transform="translate(-7.5098201,0)"
+     id="g4173">
+    <rect
+       x="17.989"
+       y="51.499001"
+       width="3.4879999"
+       height="1.9"
+       id="rect4175"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1" />
+    <text
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans"
+       x="19.733"
+       y="52.644001"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4177">EMMAX</text>
+  </g>
+  <line
+     x1="12.300184"
+     y1="45.965527"
+     x2="12.300184"
+     y2="50.499981"
+     id="line286"
+     style="stroke:#000000;stroke-width:0.09160197" />
+  <g
+     id="g4179"
+     transform="translate(-7.4328156,0)">
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       id="path130"
+       d="m 16.937,59.027 5.592,0 1.119,1 -1.119,1 -5.592,0 -1.119,-1 1.119,-1"
+       inkscape:connector-curvature="0" />
+    <text
+       id="text132"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="60.227001"
+       x="19.733"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">EMMAX 2 METAL</text>
+  </g>
+  <g
+     id="g4183"
+     transform="translate(-7.2788067,0.15400894)">
+    <path
+       d="m 16.937,59.027 5.592,0 1.119,1 -1.119,1 -5.592,0 -1.119,-1 1.119,-1"
+       id="path4185"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       inkscape:connector-curvature="0" />
+    <text
+       x="19.733"
+       y="60.227001"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4187"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">EMMAX 2 METAL</text>
+  </g>
+  <g
+     transform="translate(-7.1247978,0.30801788)"
+     id="g4189">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       id="path4191"
+       d="m 16.937,59.027 5.592,0 1.119,1 -1.119,1 -5.592,0 -1.119,-1 1.119,-1" />
+    <text
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans"
+       id="text4193"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="60.227001"
+       x="19.733">EMMAX 2 METAL</text>
+  </g>
+  <g
+     id="g4195"
+     transform="translate(-6.9707888,0.46202682)">
+    <path
+       d="m 16.937,59.027 5.592,0 1.119,1 -1.119,1 -5.592,0 -1.119,-1 1.119,-1"
+       id="path4197"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       inkscape:connector-curvature="0" />
+    <text
+       x="19.733"
+       y="60.227001"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4199"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">EMMAX 2 METAL</text>
+  </g>
+  <g
+     id="g4201"
+     transform="translate(-7.4328156,0)">
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       id="path142"
+       d="m 17.761,63.929 3.944,0 0,2.829 c -0.789,-0.472 -1.183,-0.472 -1.972,0 -0.789,0.471 -1.183,0.471 -1.972,0 l 0,-2.829"
+       inkscape:connector-curvature="0" />
+    <text
+       id="text144"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="64.907997"
+       x="19.733"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">METAL</text>
+    <text
+       id="text146"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="65.708"
+       x="19.733"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">script</text>
+  </g>
+  <g
+     id="g4214"
+     transform="translate(-7.2788067,0.15400894)">
+    <path
+       d="m 17.761,63.929 3.944,0 0,2.829 c -0.789,-0.472 -1.183,-0.472 -1.972,0 -0.789,0.471 -1.183,0.471 -1.972,0 l 0,-2.829"
+       id="path4216"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       inkscape:connector-curvature="0" />
+    <text
+       x="19.733"
+       y="64.907997"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4218"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">METAL</text>
+    <text
+       x="19.733"
+       y="65.708"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4220"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">script</text>
+  </g>
+  <g
+     transform="translate(-7.1247978,0.30801788)"
+     id="g4222">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       id="path4224"
+       d="m 17.761,63.929 3.944,0 0,2.829 c -0.789,-0.472 -1.183,-0.472 -1.972,0 -0.789,0.471 -1.183,0.471 -1.972,0 l 0,-2.829" />
+    <text
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans"
+       id="text4226"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="64.907997"
+       x="19.733">METAL</text>
+    <text
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans"
+       id="text4228"
+       font-weight="400"
+       font-style="normal"
+       font-size="0.80"
+       y="65.708"
+       x="19.733">script</text>
+  </g>
+  <g
+     id="g4230"
+     transform="translate(-6.9707888,0.46202682)">
+    <path
+       d="m 17.761,63.929 3.944,0 0,2.829 c -0.789,-0.472 -1.183,-0.472 -1.972,0 -0.789,0.471 -1.183,0.471 -1.972,0 l 0,-2.829"
+       id="path4232"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
+       inkscape:connector-curvature="0" />
+    <text
+       x="19.733"
+       y="64.907997"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4234"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">METAL</text>
+    <text
+       x="19.733"
+       y="65.708"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text4236"
+       style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">script</text>
+  </g>
+</svg>
